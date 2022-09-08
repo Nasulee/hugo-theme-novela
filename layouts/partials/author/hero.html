@@ -6,7 +6,10 @@
             </div>
         {{ end }}
         <h1 class="author-heading">{{ .Title }}</h1>
-        <p class="author-subheading">{{ .Params.bio }}</p>
+        {{ $list := strings.Split .Params.bio "\n" }}
+        {{ range $list }}
+            <p class = "author-subheading">{{ . }}</p>
+        {{ end }}
         <div class="author-social">
             {{ partial "author/social_links.html" . }}
         </div>

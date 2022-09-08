@@ -1,10 +1,17 @@
 <div class="footer-gradient"></div>
-    <div class="section narrow">
-      <div class="footer-hr"></div>
-      <div class="footer-container">
-        <div class="footer-text">
-          © {{ dateFormat "2006" now }} {{ .Site.Title }}
-        </div>
-        {{ partial "social-links/social-links.html" . }}
+<div class="section narrow">
+  <div class="footer-hr"></div>
+  <div class="footer-container">
+    <div class="footer-left">
+      <div>
+        <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">
+          {{ .Site.Params.customHtml }}</a
+        >
+      </div>
+      <div class="footer-text">
+        © Copyright {{ dateFormat "2006" now }} {{ .Site.Params.copyrightHtml }}
+      </div>
     </div>
+    {{ partial "social-links/social-links.html" . }}
+  </div>
 </div>
